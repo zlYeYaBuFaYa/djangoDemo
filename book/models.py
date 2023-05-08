@@ -12,3 +12,13 @@ class Book(models.Model):
 
     class Meta:
         db_table = "books"
+
+
+class Hero(models.Model):
+    name = models.CharField(max_length=50)
+    skill = models.CharField(max_length=100)
+    book_id = models.IntegerField()
+    is_deleted = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = "heroes"
